@@ -43,12 +43,10 @@ Study the design and formulate a plan for how to approach the HTML and CSS.
 - Flexbox
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-Used a picture element in the HTML as the image source changed depending on screen size.
-Used an after element to overlay a color with an opacity of 0.5 over the card image.
+Used a picture element in the HTML because the image source changed depending on screen size.
+Used an 'after' element to overlay a color with an opacity of 0.5 over the card image.
 
 ```html
 <picture>
