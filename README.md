@@ -48,6 +48,8 @@ Study the design and formulate a plan for how to approach the HTML and CSS.
 Used a picture element in the HTML because the image source changed depending on screen size.
 Used an 'after' element to overlay a color with an opacity of 0.5 over the card image.
 
+Also on mobile screens the component was taller than the height of the viewport. So on review, and after being pointed out by "Aaron Varga", I changed the height of the main element from "height: 100vh" to "min-height: 100vh. This fixed the issue. Aaron also sugested adding some padding-block to the main element so it would not hug the top and bottom of the screen on mobile devices. 
+
 ```html
 <picture>
   <source
@@ -72,6 +74,11 @@ Used an 'after' element to overlay a color with an opacity of 0.5 over the card 
   background-color: var(--primary-accent);
   opacity: 0.5;
   z-index: 1;
+}
+
+main {
+  min-height: 100vh;
+  padding-block: 5em;
 }
 ```
 
