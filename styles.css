@@ -34,7 +34,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-block: 5em;
 }
 
 .card__image {
@@ -63,7 +64,7 @@ main {
 
 .card {
   background-color: var(--primary-card-bg);
-  width: clamp(300px, 85%, 500px);
+  width: clamp(250px, 85%, 500px);
   margin: auto;
   border-radius: 0.5em;
   text-align: center;
@@ -104,6 +105,7 @@ main {
 
 .card__stat__heading {
   margin-bottom: 0.2em;
+  font-size: 1.8rem;
 }
 
 .card__stat__text {
@@ -112,11 +114,11 @@ main {
   letter-spacing: 1px;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1000px) {
   .card {
     display: flex;
     text-align: left;
-    width: clamp(300px, 80%, 1200px);
+    width: clamp(250px, 80%, 1100px);
   }
 
   .card > * {
@@ -131,19 +133,27 @@ main {
     justify-content: space-between;
   }
 
+  .card__stat__heading {
+    font-size: 1.4rem;
+  }
+
+  .card__stat__text {
+    letter-spacing: normal;
+  }
+
   .card__content {
     padding: 5em;
     margin: 0;
   }
 
   .card__heading {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 1.5rem;
   }
 
   .card__text {
     font-size: 16px;
-    margin-bottom: 6em;
+    margin-bottom: 2em;
   }
 
   .card__stat {
@@ -153,5 +163,25 @@ main {
   .card__text,
   .card__stats {
     max-width: 380px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card__heading {
+    font-size: 2.5rem;
+  }
+
+  .card__text {
+    margin-bottom: 6em;
+    letter-spacing: 1px;
+  }
+
+  .card__stat__heading {
+    font-size: 2rem;
+  }
+
+  .card__stat__text {
+    letter-spacing: 1px;
+    font-size: 13px;
   }
 }
